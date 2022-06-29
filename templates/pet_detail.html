@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Pets{% endblock %}
+
+{% block content %}
+    <h1>{{ pet.name }}</h1>
+    <h2>Species: {{ pet.species }}</h2>
+    {% if pet.age %}
+    <p>Age: {{ pet.age }}</p>
+    {% endif %}
+    <img src={{ pet.photo_url }}>
+
+    <h2>Update</h2>
+    <form>
+        <div class="form-group row">
+            <label for="photo_url" class="col-sm-2 col-form-label">Photo URL</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="photo_url" name="photo_url"></textarea>
+            </div>
+          </div>
+        
+          <div class="form-group row">
+            <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="notes" name="notes"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="available" class="col-sm-2 col-form-label">Available</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="available" name="available"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="ml-auto mr-3">
+              <a href="/" class="btn btn-info">Cancel</a>
+              <button type="submit" class="btn btn-success">Update</button>
+            </div>
+          </div>
+    </form>
+{% endblock %}
+
+

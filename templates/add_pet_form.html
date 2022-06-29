@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Add a Pet{% endblock %}
+
+{% block content %}
+
+<h1>Add A Pet</h1>
+
+<form method="POST">
+
+  <div class="form-group row">
+    <label for="name" class="col-sm-2 col-form-label">Pet name</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="name" name="name">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="species" class="col-sm-2 col-form-label">Species</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="species" name="species"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="photo_url" class="col-sm-2 col-form-label">Photo URL</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="photo_url" name="photo_url"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="age" class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="age" name="age"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="notes" name="notes"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="ml-auto mr-3">
+      <a href="/" class="btn btn-info">Cancel</a>
+      <button type="submit" class="btn btn-success">Add</button>
+    </div>
+  </div>
+
+{% endblock %}
